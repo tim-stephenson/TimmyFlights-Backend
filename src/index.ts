@@ -1,1 +1,1 @@
-export { handler } from "./NotificationSignUpService/server";
+export { handler } from "./main/server";

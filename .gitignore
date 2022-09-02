@@ -133,6 +133,3 @@ dist
 # Build:
 dist
 dist.zip
-
-# Security Credentials:
-src/SecurityCredentials.json
