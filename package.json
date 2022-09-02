@@ -1,0 +1,31 @@
+{
+  "name": "timmyflights",
+  "version": "1.0.0",
+  "description": "Notification API for being alerted when a publicly trackable aircraft flies over a user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "compile": "tsc && bash ./scripts/copyPackageJSON.sh && cd ./dist && npm i --omit=dev && bash ./../scripts/zip.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-stephenson/TimmyFlights.git"
+  },
+  "author": "Timothy Stephenson",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/tim-stephenson/TimmyFlights/issues"
+  },
+  "homepage": "https://github.com/tim-stephenson/TimmyFlights#readme",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.154.0",
+    "@aws-sdk/lib-dynamodb": "^3.154.0",
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.7.13",
+    "typescript": "^4.8.2"
+  }
+}
