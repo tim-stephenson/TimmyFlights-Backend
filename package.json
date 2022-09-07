@@ -6,20 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "compile": "tsc && bash ./scripts/copyPackageJSON.sh && cd ./dist && npm i --omit=dev && bash ./../scripts/zip.sh"
+    "compile": "tsc && bash ./scripts/copyPackageJSON.sh && cd ./dist && npm ci --omit=dev && bash ./../scripts/zip.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tim-stephenson/TimmyFlights.git"
+    "url": "TODO git+https://github.com/tim-stephenson/TimmyFlights.git"
   },
   "author": "Timothy Stephenson",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/tim-stephenson/TimmyFlights/issues"
+    "url": "TODO https://github.com/tim-stephenson/TimmyFlights/issues"
   },
-  "homepage": "https://github.com/tim-stephenson/TimmyFlights#readme",
+  "homepage": "TODO https://github.com/tim-stephenson/TimmyFlights#readme",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.154.0",
+    "@aws-sdk/client-sns": "^3.165.0",
     "@aws-sdk/lib-dynamodb": "^3.154.0"
   },
   "devDependencies": {

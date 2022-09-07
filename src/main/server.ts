@@ -1,6 +1,7 @@
 import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
 const client = new DynamoDBClient({});
 import { DynamoDBDocumentClient, PutCommand, ScanCommand, DeleteCommand, UpdateCommand, GetCommand } from "@aws-sdk/lib-dynamodb";
+import subscribeToSNS from "./subscribeToSNS";
 export const dynamo = DynamoDBDocumentClient.from(client);
 export const TableName = "TimmyTable";
 
@@ -26,6 +27,7 @@ export const handler = async (event : any, context : any) => {
                 break;
             case 'POST':
                 body = await dynamo.send( new PutCommand({TableName : TableName, Item : JSON.parse(event.body) }) );
+                await  subscribeToSNS(JSON.parse(event.body).email);
                 break;
             default:
                 throw new Error(`Unsupported method "${event.httpMethod}"`);
