@@ -1,1 +1,2 @@
-export { handler } from "./main/server";
+import  handler from "./main/server";
+export default handler;

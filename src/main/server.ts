@@ -4,7 +4,7 @@ import { DynamoDBDocumentClient, PutCommand, ScanCommand, DeleteCommand, UpdateC
 export const dynamo = DynamoDBDocumentClient.from(client);
 export const TableName = "TimmyTable";
 
-export const handler = async (event : any, context : any) => {
+export default async function handler(event : any, context : any){
     let body;
     let statusCode = '200';
     const headers = {
